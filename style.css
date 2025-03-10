@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.title {
+  margin: 2rem auto;
+  text-align: center;
+  color: #2e2e2e;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background-color: #e67e22;
+  bottom: -10px;
+  left: 25%;
+}
+
+.refeicoes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.btn {
+  background-color: #e67e22;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pratos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.prato-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.prato-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.prato {
+  width: 35%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.prato:hover {
+  transform: scale(1.1);
+}
+
+.detalhes h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.detalhes p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.detalhes p span {
+  font-weight: bold;
+  color: #e67e22;
+}
+.prato-item.active {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.favorite-btn {
+  background-color: transparent;
+  border: none;
+  color: #e67e22;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.favorite-btn:hover {
+  color: #e74c3c;
+}
+
+.favorite-btn.active-favorite {
+  color: #e74c3c;
+}
+
+.favorite-count {
+  font-size: 1.5rem;
+  background-color: #e67e22;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .refeicoes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .prato-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prato {
+    width: 70%;
+  }
+}
