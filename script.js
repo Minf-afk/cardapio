@@ -95,3 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.refeicoes').appendChild(allButton);
   });
   
+  const updateBackground = () => {
+    const hour = new Date().getHours();
+    if (hour >= 6 && hour < 18) {
+      document.body.style.backgroundColor = "#fdfdbb"; // Dia
+    } else {
+      document.body.style.backgroundColor = "#2c3e50"; // Noite
+    }
+  };
+  
+  updateBackground();
+  
