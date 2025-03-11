@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Filtro de categorias
+    
     const buttons = document.querySelectorAll('.btn');
     const pratoItems = document.querySelectorAll('.prato-item');
     
@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
       pratoItems.forEach((item) => {
         const itemCategory = item.querySelector('.prato').alt.toLowerCase();
         if (itemCategory.includes(category) || category === "todos") {
-          item.style.display = "flex"; // Exibir item
+          item.style.display = "flex"; 
         } else {
-          item.style.display = "none"; // Ocultar item
+          item.style.display = "none"; 
         }
       });
     }
   
-    // 2. Animação ao passar o mouse sobre o prato
+    
     pratoItems.forEach(item => {
       item.addEventListener('mouseover', () => {
         item.classList.add('active');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // 3. Contador de itens favoritos
+    
     let favoriteCount = 0;
   
     pratoItems.forEach(item => {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    // 4. Efeito de transição suave no título
+    
     const title = document.querySelector('.title h1');
     title.addEventListener('mouseover', () => {
       title.style.transition = 'all 0.3s ease';
@@ -98,9 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateBackground = () => {
     const hour = new Date().getHours();
     if (hour >= 6 && hour < 18) {
-      document.body.style.backgroundColor = "#fdfdbb"; // Dia
+      document.body.style.backgroundColor = "#fdfdbb"; 
     } else {
-      document.body.style.backgroundColor = "#2c3e50"; // Noite
+      document.body.style.backgroundColor = "#2c3e50";
     }
   };
   
